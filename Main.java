@@ -17,6 +17,18 @@ public class Main {
         String receipt = receiptBuilder.getResult();
         System.out.println("Receipt:\n" + receipt);
 
+        System.out.println("\n=== Pepperoni Feast ===");
+
+        PizzaObjectBuilder pepperoniObjectBuilder = new PizzaObjectBuilder();
+        director.makePepperoniFeast(pepperoniObjectBuilder);
+        Pizza pepperoniPizza = pepperoniObjectBuilder.getResult();
+        System.out.println("Object: " + pepperoniPizza);
+
+        ReceiptBuilder pepperoniReceiptBuilder = new ReceiptBuilder();
+        director.makePepperoniFeast(pepperoniReceiptBuilder);
+        String pepperoniReceipt = pepperoniReceiptBuilder.getResult();
+        System.out.println("Receipt:\n" + pepperoniReceipt);
+
         System.out.println("\n=== Validation === ");
         try {
             new PizzaObjectBuilder()
